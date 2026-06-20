@@ -1,0 +1,40 @@
+{
+  "name": "lontar-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for agentic blog management via the Lontar headless blogging API",
+  "type": "module",
+  "main": "./dist/index.js",
+  "bin": {
+    "lontar-mcp": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "start": "node dist/index.js",
+    "test": "npm run build && node --import tsx node_modules/cobasaja/dist/cli.js"
+  },
+  "keywords": [
+    "mcp",
+    "lontar",
+    "blog",
+    "headless-cms"
+  ],
+  "author": "Simon Harms",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.0",
+    "cobasaja": "^1.0.0",
+    "tsup": "^8.5.1",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
